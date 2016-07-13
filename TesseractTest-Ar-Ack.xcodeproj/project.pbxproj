@@ -343,6 +343,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TesseractTest-Ar-Ack/TesseractTest-Ar-Ack-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -358,6 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appsbypat.TesseractTest-Ar-Ack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TesseractTest-Ar-Ack/TesseractTest-Ar-Ack-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
