@@ -28,16 +28,6 @@
                                     <action selector="choosePic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4d-hK-iOx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-mA-8y3">
-                                <rect key="frame" x="20" y="58" width="99" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZNh-2D-aa3"/>
-                                </constraints>
-                                <state key="normal" title="Check test Pic"/>
-                                <connections>
-                                    <action selector="checkPic" destination="BYZ-38-t0r" eventType="touchUpInside" id="mFF-uC-TeH"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="*Test Text*" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hru-Si-Lau">
                                 <rect key="frame" x="20" y="96" width="560" height="145"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,19 +41,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="hru-Si-Lau" secondAttribute="trailing" id="7yv-e5-2Nw"/>
+                            <constraint firstItem="hru-Si-Lau" firstAttribute="top" secondItem="SdH-Kd-OnH" secondAttribute="bottom" constant="46" id="FuI-4B-jsu"/>
                             <constraint firstItem="SdH-Kd-OnH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XiM-TB-QyT"/>
-                            <constraint firstItem="hru-Si-Lau" firstAttribute="top" secondItem="Rgc-mA-8y3" secondAttribute="bottom" constant="8" id="rk3-XS-O0X"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Rgc-mA-8y3" secondAttribute="leading" id="rlS-NF-7Fx"/>
-                            <constraint firstItem="Rgc-mA-8y3" firstAttribute="top" secondItem="SdH-Kd-OnH" secondAttribute="bottom" constant="8" id="rs3-rq-M8O"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hru-Si-Lau" secondAttribute="leading" id="sSx-aM-mlL"/>
-                            <constraint firstItem="hru-Si-Lau" firstAttribute="leading" secondItem="Rgc-mA-8y3" secondAttribute="trailing" constant="-99" id="wn2-pK-Cl0"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SdH-Kd-OnH" secondAttribute="leading" id="zGE-bg-N9F"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="wn2-pK-Cl0"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="resultTextView" destination="hru-Si-Lau" id="4mk-nM-Snf"/>

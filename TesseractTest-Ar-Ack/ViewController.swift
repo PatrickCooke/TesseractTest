@@ -9,9 +9,10 @@
 import UIKit
 import TesseractOCR
 
-class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, G8TesseractDelegate {
+class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
     @IBOutlet weak var resultTextView   :UITextView!
+    var activityIndicator:UIActivityIndicatorView!
 
     //MARK: - Interaction Methods
     
@@ -45,22 +46,72 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         // 6
         presentViewController(imagePickerActionSheet, animated: true, completion: nil)
         
+    }
+    
+    func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        var scaleFactor: CGFloat
         
+        if image.size.width > image.size.height {
+            scaleFactor = image.size.height / image.size.width
+            scaledSize.width = maxDimension
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            scaleFactor = image.size.width / image.size.height
+            scaledSize.height = maxDimension
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
+        
+        UIGraphicsBeginImageContext(scaledSize)
+        image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        let selectedPhoto = editingInfo![UIImagePickerControllerOriginalImage] as! UIImage
+        let scaledImage = scaleImage(selectedPhoto, maxDimension: 640)
+        
+        addActivityIndicator()
+        
+        dismissViewControllerAnimated(true) {
+            self.checkPic(scaledImage)
+        }
     }
     
    
     
-    @IBAction func checkPic() {
+    func checkPic(image: UIImage) {
         
         let tesseract:G8Tesseract = G8Tesseract(language:"eng");
         tesseract.language = "eng";
+        tesseract.engineMode = .TesseractCubeCombined
+        tesseract.pageSegmentationMode = .Auto
         tesseract.delegate = self;
-        tesseract.charWhitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
-        tesseract.image = UIImage(named: "test");
+        //tesseract.charWhitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
+        tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize();
         
-        //NSLog("%@", tesseract.recognizedText);
         resultTextView.text = tesseract.recognizedText
+        
+        removeActivityIndicator()
+    }
+    
+    // Activity Indicator methods
+    
+    func addActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(frame: view.bounds)
+        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.25)
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+    }
+    
+    func removeActivityIndicator() {
+        activityIndicator.removeFromSuperview()
+        activityIndicator = nil
     }
     
     //MARK: - Life Cycle Methods
@@ -79,4 +130,16 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     }
 }
 
-
+extension ViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let scaledImage = scaleImage(selectedPhoto, maxDimension: 640)
+        
+        addActivityIndicator()
+        
+        dismissViewControllerAnimated(true, completion: {
+            self.checkPic(scaledImage)
+        })
+    }
+}
