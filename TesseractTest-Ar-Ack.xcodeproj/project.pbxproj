@@ -12,9 +12,12 @@
 		4307195E1D357DE7007A1547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4307195C1D357DE7007A1547 /* Main.storyboard */; };
 		430719601D357DE7007A1547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4307195F1D357DE7007A1547 /* Assets.xcassets */; };
 		430719631D357DE7007A1547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430719611D357DE7007A1547 /* LaunchScreen.storyboard */; };
+		43925F351D3587E000F16735 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 43925F341D3587E000F16735 /* tessdata */; };
+		B8ED1367AE31A02CAD162EA5 /* Pods_TesseractTest_Ar_Ack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC0D9BE58927CF09CBACB1E /* Pods_TesseractTest_Ar_Ack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22A07E30F5946EF4214822FA /* Pods-TesseractTest-Ar-Ack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractTest-Ar-Ack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesseractTest-Ar-Ack/Pods-TesseractTest-Ar-Ack.debug.xcconfig"; sourceTree = "<group>"; };
 		430719551D357DE7007A1547 /* TesseractTest-Ar-Ack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TesseractTest-Ar-Ack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		430719581D357DE7007A1547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4307195A1D357DE7007A1547 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,10 @@
 		4307195F1D357DE7007A1547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430719621D357DE7007A1547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430719641D357DE7007A1547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43925F301D35841A00F16735 /* TesseractTest-Ar-Ack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TesseractTest-Ar-Ack-Bridging-Header.h"; sourceTree = "<group>"; };
+		43925F341D3587E000F16735 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		A6C302D852A8FB5BB9A0143E /* Pods-TesseractTest-Ar-Ack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractTest-Ar-Ack.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesseractTest-Ar-Ack/Pods-TesseractTest-Ar-Ack.release.xcconfig"; sourceTree = "<group>"; };
+		DEC0D9BE58927CF09CBACB1E /* Pods_TesseractTest_Ar_Ack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractTest_Ar_Ack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ED1367AE31A02CAD162EA5 /* Pods_TesseractTest_Ar_Ack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A6A6317DBEE3ADDF6BFAED8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEC0D9BE58927CF09CBACB1E /* Pods_TesseractTest_Ar_Ack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4307194C1D357DE7007A1547 = {
 			isa = PBXGroup;
 			children = (
 				430719571D357DE7007A1547 /* TesseractTest-Ar-Ack */,
 				430719561D357DE7007A1547 /* Products */,
+				88422195C18865E463E11524 /* Pods */,
+				0A6A6317DBEE3ADDF6BFAED8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +76,21 @@
 				4307195A1D357DE7007A1547 /* ViewController.swift */,
 				4307195C1D357DE7007A1547 /* Main.storyboard */,
 				4307195F1D357DE7007A1547 /* Assets.xcassets */,
+				43925F341D3587E000F16735 /* tessdata */,
 				430719611D357DE7007A1547 /* LaunchScreen.storyboard */,
 				430719641D357DE7007A1547 /* Info.plist */,
+				43925F301D35841A00F16735 /* TesseractTest-Ar-Ack-Bridging-Header.h */,
 			);
 			path = "TesseractTest-Ar-Ack";
+			sourceTree = "<group>";
+		};
+		88422195C18865E463E11524 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22A07E30F5946EF4214822FA /* Pods-TesseractTest-Ar-Ack.debug.xcconfig */,
+				A6C302D852A8FB5BB9A0143E /* Pods-TesseractTest-Ar-Ack.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 430719671D357DE7007A1547 /* Build configuration list for PBXNativeTarget "TesseractTest-Ar-Ack" */;
 			buildPhases = (
+				6D6F98386DD094A07FB11BD1 /* 📦 Check Pods Manifest.lock */,
 				430719511D357DE7007A1547 /* Sources */,
 				430719521D357DE7007A1547 /* Frameworks */,
 				430719531D357DE7007A1547 /* Resources */,
+				90427DA37C05E43ACA20AD43 /* 📦 Embed Pods Frameworks */,
+				5607C34D40A038BE617B0DEB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +155,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				430719631D357DE7007A1547 /* LaunchScreen.storyboard in Resources */,
+				43925F351D3587E000F16735 /* tessdata in Resources */,
 				430719601D357DE7007A1547 /* Assets.xcassets in Resources */,
 				4307195E1D357DE7007A1547 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5607C34D40A038BE617B0DEB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesseractTest-Ar-Ack/Pods-TesseractTest-Ar-Ack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D6F98386DD094A07FB11BD1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90427DA37C05E43ACA20AD43 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TesseractTest-Ar-Ack/Pods-TesseractTest-Ar-Ack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		430719511D357DE7007A1547 /* Sources */ = {
@@ -183,6 +264,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -229,6 +311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -249,23 +332,32 @@
 		};
 		430719681D357DE7007A1547 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22A07E30F5946EF4214822FA /* Pods-TesseractTest-Ar-Ack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TesseractTest-Ar-Ack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appsbypat.TesseractTest-Ar-Ack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TesseractTest-Ar-Ack/TesseractTest-Ar-Ack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		430719691D357DE7007A1547 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C302D852A8FB5BB9A0143E /* Pods-TesseractTest-Ar-Ack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TesseractTest-Ar-Ack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appsbypat.TesseractTest-Ar-Ack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TesseractTest-Ar-Ack/TesseractTest-Ar-Ack-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -288,6 +380,7 @@
 				430719691D357DE7007A1547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
